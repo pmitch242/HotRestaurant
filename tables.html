@@ -18,18 +18,28 @@
             <hr class="my-2">
             <h2 class="pb-2">Current Reservation and Waiting List</h2>
             <a href="./home.html" class="btn btn-primary">
-                <h5><i class="fas fa-home"></i> Home Page</h5></a>
-            <button type="button" class="btn btn-danger">
+                <h5><i class="fas fa-home"></i> Home Page</h5>
+            </a>
+            <a href="./reserve.html" class="btn btn-danger">
                 <h5><i class="fas fa-list-alt"></i> Make Reservation</h5>
-            </button>
+            </a>
         </div>
-        <ul class="list-group list-group-horizontal">
-            <li class="list-group-item"><a href="#">Clear Tables</a></li>
-            <li class="list-group-item"><a href="#">API Table Link</a></li>
-            <li class="list-group-item"><a href="#">API Wait List</a></li>
-        </ul>
+        <div class="card">
+            <div class="card-header pb-4">
+                Current Reservations
+            </div>
+            <div class="card-body pb-4">
+                <ul id="tablelist" class="list-group">
+                </ul>
+            </div>
+        </div>
+    <ul class="list-group list-group-horizontal mt-2">
+        <li class="list-group-item"><a href="#">Clear Tables</a></li>
+        <li class="list-group-item"><a href="#">API Table Link</a></li>
+        <li class="list-group-item"><a href="#">API Wait List</a></li>
+    </ul>
     </div>
-
+<!--need to have the GET method in here somewhere-->
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
