@@ -20,7 +20,19 @@ let reservations = [
         name: "Me",
         email: "me@yahoo.com",
         phone: "222-222-2222"
+    },
+    {
+        id: 10002,
+        name: "You",
+        email: "me@yahoo.com",
+        phone: "222-222-2222"
+    },   {
+        id: 10003,
+        name: "Them",
+        email: "me@yahoo.com",
+        phone: "222-222-2222"
     }
+
 ];
 
 // Routes
@@ -44,9 +56,17 @@ app.get("/reserve", function (req, res) {
     res.sendFile(path.join(__dirname, "reserve.html"))
 })
 
-// Display all reservations
-app.get("/api/reservations", function (req, res) {
-    return res.json(reservations);
+// Display tables
+app.get("/api/tables", function (req, res) {
+   let tables =  reservations.slice(0,2)
+    res.json(tables);
+
+});
+
+// Display waitlist
+app.get("/api/waitlist", function (req, res) {
+   let waitlist = reservations.slice(2)
+    res.json(waitlist);
 });
 
 // Create New Characters - takes in JSON input
